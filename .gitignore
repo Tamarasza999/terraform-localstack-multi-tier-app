@@ -1,3 +1,7 @@
+# LocalStack
+localstack/
+tmp/
+
 # Local .terraform directories
 .terraform/
 
