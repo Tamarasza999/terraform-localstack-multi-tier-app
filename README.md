@@ -20,7 +20,6 @@ This project builds a three-tier architecture locally, simulating AWS (Amazon We
 - Fully local deployment (no AWS account required)
 
 ## Requirements
-
 - Terraform 1.0+
 - LocalStack
 - AWS CLI
@@ -92,26 +91,5 @@ echo "Complete!"
 </code></pre>
 
 ## Architecture Diagram
-```mermaid
-flowchart TD
-  subgraph PUB["Public Subnet"]
-    Web[/"Web Server\nEC2"/]
-  end
 
-  subgraph PRI["Private Subnet"]
-    App[/"App Server\nEC2"/]
-  end
-
-  Web ---|Internet traffic| IGW["Internet Gateway"]
-  App ---|Private traffic| NAT["NAT Gateway"]
-
-  IGW --> VPC["VPC (Virtual Private Cloud)"]
-  NAT --> VPC
-  VPC --> S3["S3\nStorage"]
-
-  style PUB fill:#f3f7ff,stroke:#0b6ef6
-  style PRI fill:#fff3f0,stroke:#f97316
-  style VPC fill:#e8f6e8,stroke:#16a34a
-  style S3 fill:#fff7ed,stroke:#f59e0b
-  style NAT fill:#fde68a,stroke:#f59e0b
-  style IGW fill:#bfdbfe,stroke:#0b6ef6
+[<img src="diagram.png" width="400" alt="Multi-Tier Web Architecture"/>](diagram.png)
