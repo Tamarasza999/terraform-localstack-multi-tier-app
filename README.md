@@ -3,7 +3,7 @@
 
 ## Overview
 
-This project builds a three-tier architecture locally, simulating AWS (Amazon Web Services) using Terraform and LocalStack.
+This project builds a three-tier architecture locally, simulating AWS using Terraform and LocalStack.
 
 ## Architecture Layers
 - Web Tier: EC2 in public subnets
@@ -18,6 +18,14 @@ This project builds a three-tier architecture locally, simulating AWS (Amazon We
 - S3 bucket with versioning
 - Modular Terraform structure
 - Fully local deployment (no AWS account required)
+
+## Security Features
+-	Least privilege IAM roles - minimal permissions for each service
+-	Data encryption - dynamodb encrypted at rest
+-	Secure API access - API gateway authorisation on methods
+-	Environment security - lambda function security settings
+-	Access controls - detailed dynamodb access rules
+-	Secure communications - encrypted communication between services
 
 ## Requirements
 - Terraform 1.0+
