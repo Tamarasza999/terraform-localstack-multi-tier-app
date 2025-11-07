@@ -13,7 +13,7 @@ provider "aws" {
   skip_metadata_api_check     = true
   skip_requesting_account_id  = true
 
-  # Force path-style S3 URLs for LocalStack
+  #force path style S3 URLs for localstack
   s3_use_path_style           = true
   
   endpoints {
